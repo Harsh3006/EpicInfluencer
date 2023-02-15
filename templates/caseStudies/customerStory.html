@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>{{case.brand}} -Epic Influencers</title>
+    <link rel="stylesheet" href="{% static 'CSS/customerStory.css' %}">
+    <style>
+        .cover{
+            background-image: url({% static 'Images/pinkbg.jpg' %})
+        }
+    </style> 
+{% endblock head %}
+
+{% block content %}
+    <section class="top-banner">
+            <div class="cover">
+                <div class="cover-items">
+                    <div class="Item">
+                        <h2>BEAUTY CUSTOMER STORY</h2>
+                        <h1>Eva NYC</h1>
+                        <p>How the sustainable haircare brand used user-generated content from Epic Influencers to create shoppable content on their website.</p>
+                    </div>
+                    <div class="Item">
+                        <img src="{% static 'Images/EvaNyc.png' %}">
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="caseDetail">
+        <div style="width: 80%; margin:auto;">
+            <h1>Communicating a Relaunch Through Influencer Marketing</h1>
+            <div class="row1">
+                <div class="left image">
+                    <img src="{% static 'Images/case-evaNyc.jpg' %}">
+                </div>
+                <div class="right">
+                    <h3>The Brand</h3>
+                    <p>Eva NYC is a Brooklyn-based sustainable, affordable and effective hair care brand. In February 2021, Eva NYC re-launched their haircare portfolio in 100% recyclable aluminum. All of the products are certified cruelty-free, vegan, non-GMO, and free from harsh chemicals like parabens, sulfates, and phthalates.</p>
+                    <h3>Challenge</h3>
+                    <p>Eva NYC has worked with Epic Influencers for the last two years to support their awareness objectives, utilizing the platform for several campaigns. “Prior to working with Epic Influencers, our process was mostly manual and relatively time-consuming,” says Ashley Evans, Director of Digital Marketing at Eva NYC. “From influencer vetting and identification of talent who made the most sense for the brand, to shipping and tracking the success of our organized gifting efforts.”</p>
+                    <p>Eva NYC looked to Epic Influencers’s platform as a way to make their influencer gifting process more seamless and communicate new messages through influencers and UGC more effectively. This has included the relaunch of the haircare products in recyclable aluminum packaging. They also wanted to seed products for authentic eCommerce text reviews in tandem with new product launches.</p>
+                </div>
+            </div>
+            <div class="row1">
+                <div class="left">
+                    <h3>The Solution</h3>
+                    <p>Ashley says that working with Epic Influencers for organized influencer gifting has not only streamlined the process but also allowed them to have a community-based approach with all influencers. “Epic Influencers has become a funnel for new influencers and content creators that Eva NYC otherwise may not have connected with,” she says. “We can build long-lasting relationships with nano and micro-content creators, giving them the opportunity to sample and experience the brand, prior to inviting them to be a part of greater influencer initiatives, in either a gifting or paid capacity.” Ashley also credits Epic Influencers with better allowing the brand to easily target specific audiences, such as Gen X or millennials.</p>
+                </div>
+                <div class="right">
+                    <h3>Results</h3>
+                    <p>The content created using Epic Influencers’s influencers not only communicated new launches and messages in a clear way to targeted audiences, but has also been high-quality enough to be repurposed into shoppable galleries across Eva-NYC.com, alongside social channels. Creating a more interactive way to shop, Epic Influencers content made up 30% of UGC for the new packaging launch (which reached over 350,000 users during the campaign period). Eva NYC’s sales have increased over 100% since last year.</p>
+                    <p>Working with Epic Influencers’s broader consumer community for eCommerce text reviews, Eva NYC has also been able to generate reviews for new product launches with a 95% recommendation rate. “Being able to sample our new products and generate reviews at launch time is great to give consumers a sense of which new products will be best for them and their hair goals,” says Ashley Evans, Director of Digital Marketing at Eva NYC.</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+{% endblock content %}
+

@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'CSS/influencers.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/consumers.css' %}">
+    <title>Receive free products from brands</title>
+    {% endblock head %}
+</head>
+<body>
+    {% block content %}
+   <section class="top-banner">
+        <div class="cover">
+            <div class="cover-items">
+                <h1>Get exclusive access to free products</h1>
+                <p>Epic Influencers helps you receive free products from brands in exchange for your honest opinion.</p>
+                <div class="bigscreen-only">
+                    <div class="banner-btn">
+                        <button class="blue" type="button"><a href="{% url 'signup' %}">Sign Up</a></button>
+                    </div>
+                </div>
+                <div class="mobile-only">
+                    <img src="{% static 'Images/consumers_bg1.png' %}" width="80%">
+                    <div class="banner-btn">
+                        <button class="blue" type="button"><a href="{% url 'signup' %}">Sign Up</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-logos">
+        <div class="pad">
+            <div class="row">
+                <div class="column">
+                    <img src="{% static 'Images/sephora.png' %}">
+                    <img src="{% static 'Images/Kevyn Aucoin.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/clarins.png' %}">
+                    <img src="{% static 'Images/fresh.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/ysl.png' %}">
+                    <img src="{% static 'Images/Too Faced.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/laneige.png' %}">
+                    <img src="{% static 'Images/Elisabeth Arden.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/Skinfix.png' %}">
+                    <img src="{% static 'Images/Fenty Beauty.png' %}">     
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/adp.png' %}">
+                    <img src="{% static 'Images/Goop.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/amore-pacific.png' %}">
+                    <img src="{% static 'Images/Bobbi Brown.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/Glossy Box.png' %}">
+                    <img src="{% static 'Images/Hum.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="pad">
+            <div class="banner900 subtitle">
+                <h1>Join the Epic Influencers community today and start receiving products to review</h1>
+                <p>You can choose the products you want to try and we’ll ship them to you immediately.</p>
+            </div>
+            <div class="icon-container">
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/consumers_icon1.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p>Get early access to of all new products</p>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/consumers_icon2.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p>Receive products you want from the brands you love</p>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/consumers_icon3.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p>Order products on the go with the Epic Influencers app</p>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/consumers_icon4.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p>Share your honest opinion with other shoppers</p>
+                    </div>
+                </div>
+            </div>
+            <button class="blue" type="button"><a href="{% url 'signup' %}">Join Influencers</a></button>
+        </div>
+    </section>
+
+    <section class="number">
+        <div class="pad">
+            <div class="banner900 subtitle">
+                <h1>Thousands of consumers are already reviewing products for free</h1>
+                <p>Pick your favorite beauty, fashion, fitness and lifestyle products and receive them right to your doorstep.</p>
+            </div>
+            <div class="grid-row">
+                <div class="box1 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">300</p>K+</h1>
+                        <p>Certified consumers</p>
+                    </div>
+                </div>
+                <div class="img1">
+                    <img src="{% static 'Images/consumers_number_img1.jpg' %}">
+                </div>
+                <div class="box2 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">13,000</p>+</h1>
+                        <p>Products available right now</p>
+                    </div>
+                </div>
+                <div class="img2">
+                    <img src="{% static 'Images/consumers_number_img2.jpg' %}">
+                </div>
+                <div class="box3 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">300</p>+</h1>
+                        <p>Brands live on Epic Influencers</p>
+                    </div>
+                </div>
+                <div class="img3">
+                    <img src="{% static 'Images/consumers_number_img3.jpg' %}">
+                </div>
+            </div>
+        </div>
+        <button class="blue" type="button"><a href="{% url 'signup' %}">Join Influencers</a></button>
+    </section>
+
+    <section class="works">
+        <div class="pad">
+            <div class="banner700 subtitle">
+                <h1>How to get free products to review</h1>
+                <p>Go beyond sample boxes. Epic Influencers is a full marketplace that lets you decide what products you want to try. Access free products including clothing, makeup, skincare, perfume, vitamins, and much more.</p>
+            </div>
+            <div class="tutorial-steps">
+                <div class="step">
+                    <img src="{% static 'Images/influencers_tuto.1.jpg' %}">
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <h3>ORDER THE PRODUCTS YOU’D LIKE TO TEST</h3>
+                    <p>Everyone on Epic Influencers starts with credits that you can exchange for products. You order only the products you want to try.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/influencers_tuto.2.jpg' %}">
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <h3>GET PRODUCTS DELIVERED TO YOUR DOOR</h3>
+                    <p>Once you order a product, we will ship it right to your doorstep. No more waiting for monthly boxes filled with things you don't want!</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/consumers_tuto.3.jpg' %}">
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <h3>SHARE YOUR HONEST OPINION</h3>
+                    <p>You have 14 days to review the product after receiving it. Submit your review and get your credit back to order again - no surveys.</p>
+                </div>
+            </div>
+        </div>
+        <button class="blue" type="button"><a href="{% url 'signup' %}">Get Started</a></button>
+    </section>
+    {% endblock content %}
+</body>
+</html>

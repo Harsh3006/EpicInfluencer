@@ -1,0 +1,231 @@
+/* Navigation Bar */
+.navigation{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #d9d9d9
+}
+nav{
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center !important;
+    position: relative;
+}
+.navbar-brand img{
+    height: 60px;
+    padding-left: 30px;
+}
+button{
+    cursor: pointer;
+}
+@media (min-width: 992px){
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul{
+    list-style-type: none;
+    padding: 0 10px;
+}
+.nav-links ul li{
+    display: inline-block;
+    padding-right: 12px;
+    position: relative;
+}
+.nav-links ul a{
+    color: #555;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-links ul a.active{
+    font-weight: 600;
+    color: #3045a1;
+}
+.nav-links ul a:hover{
+    color: #3045a1 !important;
+}
+button.blue a:hover{
+    color: white !important;
+}
+.dropdown-menu{
+    display: none;
+    background-color: white;
+    width: max-content;
+    position: absolute;
+    left: -25px;
+    top: 100%;
+    border-radius: 2px;
+    padding: 0 16px 10px 16px;
+    box-shadow: 0px 8px 16px 0px rgba(87, 86, 86, 0.1);
+}
+.dropdown-menu ul li{
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+}
+.nav-links ul li:hover .dropdown-menu{
+    display: block;
+}
+.menu-toggler{
+    display: none;
+}
+}
+
+/* Top Footer */
+.footer-top{
+    background-color: #17212f;
+    margin-top: 100px !important;
+    padding: 40px 140px;
+} 
+.logo img{
+    width: 200px;
+}
+.social-icons a{
+    text-decoration: none;
+}
+.social-icons a i:hover{
+    transform: scale(1.1);
+}
+.social-icons a i{
+    display: inline-block;
+    font-size: 25px;
+    color: white;
+    font-weight: 300;
+}
+.social-icons i{
+    padding-right: 12px;
+}
+.menu-phone-bottom ul{
+    display: none;   
+}
+.menu-bottom{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu-bottom ul{
+    list-style-type: none;
+}
+.menu-bottom li.menu-header{
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.menu-bottom ul li a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    transition: transform 0.5s;
+}
+.menu-bottom ul li.menu-item:hover{
+    font-weight: bold;
+    transform: translateY(-3px);
+}
+
+/* Bottom Fotter */
+.footer-bottom{
+    font-size: 14px;
+    color: white;
+    padding: 16px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copyright{
+    padding-right: 20px;
+}
+.euro-programme{
+    border-left: 2px solid white;
+    width: 250px;
+    padding-left: 20px;
+}
+.footer-bottom img{
+    max-width: 100%;
+}
+@media (max-width: 992px){
+    .footer-top{
+        padding: 40px;
+    }
+    .nav-links ul li{
+        display: block;
+    } 
+    .nav-links{
+        position: absolute;
+        background: #1b1b1b;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: -250px;
+        text-align: left;
+        z-index: 100; 
+        transition: 1s ease-in-out;
+    }
+    .menu-toggler.fa-bars{
+        color: #1b1b1b;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .menu-toggler.fa-times{
+        font-size: 22px;
+        padding-top: 20px;
+        padding-left: 20px;
+        cursor: pointer;
+        color: white;
+    }
+    .nav-links ul li{
+        line-height: 40px;
+        padding: 8px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(230, 230, 230, 0.1);
+    }
+    .nav-links ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        display: block;
+    }
+    nav ul ul li {
+        line-height: 30px !important;
+        border-bottom: none !important;
+    }
+    button.normal{
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+    .menu-phone-bottom ul{
+        display: block;
+        max-width: 25%;
+    }
+    .menu-desktop-bottom ul{
+        display: none;
+    }
+    .nav-links li .with-border{
+        padding: 0 !important;
+        border: none !important;
+    }
+}
+@media (max-width: 600px){
+    .menu-phone-bottom ul{
+        padding-bottom: 20px;
+        flex: 50%;
+        max-width: 50% !important;
+    }
+}
+
+#preloader{
+    background: white url(../Images/preloader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}

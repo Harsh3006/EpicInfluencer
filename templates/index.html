@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head%}
+    <title>Influencer marketing at sale | Epic Influencers</title>
+    <link rel="stylesheet" href="{% static 'CSS/index_style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/slick.css' %}">
+{% endblock head%}
+
+{% block content %}
+    <!-- Top Banner -->
+    <section class="top-banner">
+            <div class="cover">
+                <div class="cover-items">
+                    <h1>Influencer marketing at scale</h1>
+                    <p>Epic Influencers is an influencer marketing platform that enables brands to collaborate with our community of 35K+ vetted influencers with a reach of over 3 billion engaged consumers.</p>
+                    <div class="bigscreen-only">
+                        <div class="banner-btn">
+                            <button class="with-border" type="button"><a href="{% url 'influencers' %}">I'm an Influencer</a></button>
+                            <button class="blue" type="button"><a href="#campaign">I'm a Brand</a></button>
+                        </div>
+                    </div>
+                    <div class="mobile-only">
+                        <img src="{% static 'Images/home_bg.jpg' %}">
+                        <div class="banner-btn">
+                            <button class="with-border" type="button"><a href="{% url 'influencers' %}s">I'm an Influencer</a></button>
+                            <button class="blue" type="button"><a href="#campaign">I'm a Brand</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Brands Logo  -->
+    <section class="brands-logos">
+        <div class="pad">
+            <div class="row">
+                <div class="column">
+                    <img src="{% static 'Images/fresh.png' %}">
+                    <img src="{% static 'Images/amore-pacific.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/evereden.png' %}">
+                    <img src="{% static 'Images/glowrecipe.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/amika.png' %}">
+                    <img src="{% static 'Images/lordjones.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/sephora.png' %}">
+                    <img src="{% static 'Images/rituals.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/diptyque.png' %}">
+                    <img src="{% static 'Images/cobigelow.png' %}">     
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/ysl.png' %}">
+                    <img src="{% static 'Images/isleofparadise.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="number">
+        <div class="pad">
+            <div class="grid-row">
+                <div class="box1 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">600,000</p>+</h1>
+                        <p>Brand/Influencer Collaborations</p>
+                    </div>
+                </div>
+                <div class="img1">
+                    <img src="{% static 'Images/home_number_img1.jpg' %}">
+                </div>
+                <div class="box2 grid-text">
+                    <div class="text">
+                        <h1>$<p class="counter">700</p>K+</h1>
+                        <p>Potential Earned Media Value per campaign</p>
+                    </div>
+                </div>
+                <div class="img2">
+                    <img src="{% static 'Images/home_number_img2.jpg' %}">
+                </div>
+                <div class="box3 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">4,534</p></h1>
+                        <p>Average Interactions per asset</p>
+                    </div>
+                </div>
+                <div class="img3">
+                    <img src="{% static 'Images/home_number_img3.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign -->
+    <section id="campaign" class="campaign">
+        <div class="pad">
+            <div class="banner900 subtitle">
+                <h1>Choose Your Campaign</h1>
+                <p>Epic Influencers helps brands connect with macro, micro, and nano influencers for authentic product reviews across social media and eCommerce platforms. We can recommend solutions based on your goals.</p>
+            </div>
+            <div class="campaigns">
+                <div class="icon-container">
+                    <a href="#social-post">
+                        <div class="icon-box">
+                            <img src="{% static 'Images/social.svg' %}" width="100px">
+                        </div>
+                    </a>
+                    <a href="#text-review">
+                        <div class="icon-box">
+                            <img src="{% static 'Images/text.svg' %}" width="100px">
+                        </div>
+                    </a>
+                    <a href="#brand-events">
+                        <div class="icon-box">
+                            <img src="{% static 'Images/brand.svg' %}" width="100px">
+                        </div>
+                    </a>
+                    <a href="#promo-campaign">
+                        <div class="icon-box">
+                            <img src="{% static 'Images/campaign.svg' %}" width="100px">
+                        </div>
+                    </a>
+                </div>
+                <div class="icon-container">
+                    <a href="#social-post"><p>SOCIAL MEDIA CONTENT</p></a>
+                    <a href="#text-review"><p>TEXT REVIEWS</p></a>
+                    <a href="#brand-events"><p>BRAND EVENTS</p></a>
+                    <a href="#promo-campaign"><p>PROMO CAMPAIGNS</p></a>
+                </div>
+                <div class="icon-container">
+                    <a href="#social-post"><i class="fas fa-chevron-down" style="font-size: 30px;"></i></a>
+                    <a href="#text-review"><i class="fas fa-chevron-down" style="font-size: 30px;"></i></a>
+                    <a href="#brand-events"><i class="fas fa-chevron-down" style="font-size: 30px;"></i></a>
+                    <a href="#promo-campaign"><i class="fas fa-chevron-down" style="font-size: 30px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign Explain -->
+    <article>
+        <div class="pad">
+            <section class="explain">
+                <div id="social-post" class="row width1200">
+                    <div class="column">
+                        <img src="{% static 'Images/socialPosts.gif' %}" alt="">
+                    </div>
+                    <div class="column">
+                        <div>
+                            <p class="title">SOCIAL POSTS</p>
+                            <h2>Increase brand awareness</h2>
+                            <p>Reach up to 3 billion new consumers by enlisting our nano, micro, and macro influencers to post about your brand and products on Instagram, YouTube and MXTakaTak.</p>
+                            <button class="blue" type="button"><a href="{% url 'demo-request' %}">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="explain">
+                <div id="text-review" class="row width1200 row-reverse">
+                    <div class="column">
+                        <div>
+                            <p class="title">TEXT REVIEW CAMPAIGNS</p>
+                            <h2>Provide social proof</h2>
+                            <p>Leverage our community of consumers, micro, and nano influencers to generate authentic text reviews on retailer and brand eCommerce websites.</p>
+                            <button class="blue" type="button"><a href="{% url 'demo-request' %}">Learn More</a></button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="{% static 'Images/textReview.png' %}">
+                    </div>
+                </div>
+            </section>
+            <section class="explain">
+                <div id="brand-events" class="row width1200">
+                    <div class="column">
+                        <img src="{% static 'Images/events.gif' %}">
+                    </div>
+                    <div class="column">
+                        <div>
+                            <p class="title">EVENTS</p>
+                            <h2>Grow your community</h2>
+                            <p>Generate buzz around product launches, pop-up shops, and getaways by inviting influencers to attend and evangelize your brand events.</p>
+                            <button class="blue" type="button"><a href="{% url 'demo-request' %}">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="explain">
+                <div id="promo-campaign" class="row width1200 row-reverse">
+                    <div class="column">
+                        <div>
+                            <p class="title">PROMO CODE CAMPAIGNS</p>
+                            <h2>Acquire new customers</h2>
+                            <p>Allow your influencers to share promo codes with their communities to encourage site traffic and conversion of new customers, all while being able to track which influencers are key to your growth.</p>
+                            <button class="blue" type="button"><a href="{% url 'demo-request' %}">Learn More</a></button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="{% static 'Images/promoCampaign.gif' %}">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+
+    <!-- Slider -->
+    <section class="slider">
+        <div class="pad">
+            <div id="slider-row">
+                <div class="slides">
+                    <img src="{% static 'Images/slider1.png' %}" class="logo-top">
+                    <blockquote>
+                        <i class="fas fa-quote-left"></i>
+                        <p>How do you scale and still remain true to your brand? One of the things I’ll say for Epic Influencers is that, in the fastest amount of time we were able to expand our community but still in a meaningful way.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <img src="{% static 'Images/fresh.png' %}" class="logo-bottom">
+                </div>
+                <div class="slides">
+                    <img src="{% static 'Images/slider2.png' %}" class="logo-top">
+                    <blockquote>
+                        <i class="fas fa-quote-left"></i> <br>
+                        <p>Epic Influencers is a propeller of growth and notoriety on social media. In just a few months, Epic Influencers has become an integral part of the influencer marketing strategy here at Talika.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <img src="{% static 'Images/slider-logo2.png' %}" class="logo-bottom">
+                </div>
+                <div class="slides">
+                    <img src="{% static 'Images/slider3.png' %}" class="logo-top">
+                    <blockquote>
+                        <i class="fas fa-quote-left"></i> <br>
+                        <p>Epic Influencers continuously helps us to generate further brand awareness and foster excitement for our top products. It allows us to spread awareness of our brand and seed top products to micro influencers, for trial and additional exposure.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <img src="{% static 'Images/slider-logo3.png' %}" class="logo-bottom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="pad">
+            <div class="banner700 subtitle">
+                <h1>Case Studies</h1>
+                <p>Epic Influencers partners with the word's best brands across beauty, fashion, fitness, and lifestyle. Here are some of our favorite success stories!</p>
+            </div>
+            <div class="cases">
+                <div class="case-left">
+                    <div class="case-container">
+                        <div class="fleft imgzoom">
+                            <img src="{% static 'Images/case-suncoo.jpg' %}">
+                        </div>
+                        <div class="fright">
+                            <div>
+                                <h1>60%</h1>
+                                <p>Increased traffic to Suncoo website in 5 months.</p>
+                            </div>
+                            <div>
+                                <h3>Suncoo</h3>
+                                <button class="blue" type="button"><a href="#">Read</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-right">
+                    <div class="case-container">
+                        <div class="fleft imgzoom">
+                            <img src="{% static 'Images/case-lalalab.jpg' %}">
+                        </div>
+                        <div class="fright">
+                            <div>
+                                <h1>10M</h1>
+                                <p>Interactions on Instagram and Youtube in 6 months.</p>
+                            </div>
+                            <div>
+                                <h3>Lalalab</h3>
+                                <button class="blue" type="button"><a href="#">Read</a></button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="cases">
+            <div class="case-left">
+                <div class="case-container">
+                    <div class="fleft imgzoom">
+                        <img src="{% static 'Images/case-clarins.jpg' %}">
+                    </div>
+                    <div class="fright">
+                        <div>
+                            <h1>4M</h1>
+                            <p>Interactions in 6 months.</p>
+                        </div>
+                        <div>
+                            <h3>Clarins</h3>
+                            <button class="blue" type="button"><a href="#">Read</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-right">
+                <div class="case-container">
+                    <div class="fleft imgzoom">
+                        <img src="{% static 'Images/case-scentbird.jpg' %}">
+                    </div>
+                    <div class="fright">
+                        <div>
+                            <h1>$68K</h1>
+                            <p>In EMV & over 446,000 interactions in 6 months.</p>
+                        </div>
+                        <div>
+                            <h3>Scentbird</h3>
+                            <button class="blue" type="button"><a href="#">Read</a></button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="works">
+        <div class="pad">
+            <div class="banner700 subtitle">
+                <h1>Here's How It Works</h1>
+                <p>Epic Influencers is a platform that connects your brand with our community of influencers to create authentic and engaging content.</p>
+            </div>
+            <div class="tutorial-steps">
+                <div class="step">
+                    <img src="{% static 'Images/home_tuto.1.jpg' %}">
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <h3>CREATE YOUR CAMPAIGN</h3>
+                    <p>Choose your products and target influencers based on engagement, category, location, audience demographics, and more.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/home_tuto.2.jpg' %}">
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <h3>CONNECT WITH INFLUENCERS</h3>
+                    <p>Review influencer applications and performance data to choose who to collaborate with to promote your brand and products.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/home_tuto.3.jpg' %}">
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <h3>RECEIVE QUALITY CONTENT</h3>
+                    <p>Influencers create authentic social content according to your campaign brief, sharing it with their dedicated followers on Instagram and YouTube.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/home_tuto.4.jpg' %}">
+                    <div class="bullet">
+                        <span>4</span>
+                    </div>
+                    <h3>MEASURE THE RESULTS</h3>
+                    <p>Track campaign performance and optimize future activations based on engagement rate, reach, and Earned Media Value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience -->
+    <section class="audience">
+        <div class="pad">
+            <div class="banner700 subtitle">
+                <h1>Reach over 3 billion Subscribers</h1>
+                <p>Our international community of influencers helps brands connect with customers around the world or across the street.</p>
+            </div>
+            <img src="{% static 'Images/brands.map.jpg' %}" style="max-width: 100%;" alt="brands map">
+        </div>
+    </section>
+
+    <!-- Request Demo -->
+    <div class="bottom-request">
+        <button class="blue"><a href="{% url 'demo-request' %}">Request a Demo</a></button>
+    </div>
+    <script src="{% static 'JS/slick.min.js' %}"></script>
+{% endblock%}

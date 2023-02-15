@@ -1,0 +1,449 @@
+body{
+    overflow-x: hidden;
+}
+*{
+    font-family: sans-serif;
+}
+header div{
+    display: flex;
+    align-items: center;
+}
+.fa-user-circle{
+    font-size: 40px;
+    color: #1b1b1b;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.fa-user-circle:hover{
+    transform: scale(1.2);
+}
+#menu{
+    position: absolute;
+    right: -100%;
+    opacity: 0;
+    background-color: white;
+    box-shadow: rgb(230 230 230) 0px 0px 5px;
+    padding: 16px 24px 16px 56px;
+    transition: 0.5s;
+    z-index: 1;
+}
+#menu ul li{
+    list-style-type: none;
+    text-align: right;
+}
+#menu ul li a{
+    color: #333333;
+    font-size: 18px;
+}
+.phone-menu{
+    display: none !important;
+}
+#campaign-carousel{
+    text-align: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 0px !important;
+    padding: 80px 70px;
+    transition: 0.5s ease-in-out;
+}
+#campaign-carousel h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+#campaign-carousel p{
+    max-width: 1000px;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.carousel-btn{
+    margin-top: 40px;
+    display: flex;
+}
+.carousel-btn a{
+    text-align: center;
+    background-color: rgb(23, 33, 47);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    transition: all 300ms ease 0s;
+}
+.carousel-btn a:hover{
+    background-color: white;
+    color: rgb(23, 33, 47);
+}
+.activate-email{
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    background-color: #FF5252 !important;
+    padding: 15px 40px;
+}
+.activate-email p{
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+.activate-email a{
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.popup-container{
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+.popup-item{
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup-item span{
+    position: absolute;
+    right: 20px;
+    font-size: 22px;
+    color: #000;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.popup-item h1{
+    font-size: 36px;
+    font-weight: 300 !important;
+    margin: 40px 0 0;
+    text-align: center;
+}
+.popup-item p{
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 10px;
+    margin: 10px 20px;
+    text-align: center;
+}
+.form-container{
+    padding: 10px 40px 0;
+}
+form{
+    margin-top: 30px;
+}
+.input-group{
+    width: 48%;
+    display: inline-block;
+}
+.input-group.mr20{
+    margin-right: 20px;
+}
+label{
+    font-size: 16px;
+    text-align: left;
+    color: #666666;
+    font-weight: bold;
+    cursor: pointer;
+}
+input, select{
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid #a0a0a0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+input[type=submit]{
+    background-color: #3045a1;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img{
+    width: 80px;
+    margin: 50px;
+}
+#message{
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    line-height: 1.2;
+    padding: 15px;
+    margin-bottom: 20px;
+    transform: translate(-50%,50%);
+    position: absolute;
+    z-index: 100;
+    box-shadow: 2px 2px 2px 1px rgb(6 6 6  / 20%);
+    left: 50%;
+}
+#message.error{
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+#message.success{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+.settings{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+.container::before, .container::after, .left-nav::before, .left-nav::after, #right::before, #right::after, .influencer-campaigns .campaigns::before, .influencer-campaigns .campaigns::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.left-nav{
+    width: 20%;
+    float: left;
+    padding: 10px;
+    position: sticky;
+    top: 135px;
+}
+#right{
+    width: 79%;
+    float: right;
+    text-align: left !important;
+}
+.right-header {
+    padding: 24px 28px;
+    border: 1px solid #e8e8ed;
+    margin-bottom: 16px;
+}
+#right h1{
+    font-size: 24px;
+    color: #333333;
+}
+#right p{
+    color: #999999;
+    font-family: sans-serif;
+    margin-top: 5px;
+}
+.benefits{
+    padding: 16px;
+}
+.benefits div{
+    display: flex;
+    align-items: center;
+}
+.benefits div img{
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+.accounts-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-bottom: 20px;
+}
+.accounts-col{
+    border: 1px solid #e8e8ed;
+    padding: 20px 16px;
+}
+.accounts-col i{
+    color: #3045a1;
+    margin-right: 5px;
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name img{
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.name h2{
+    font-size: 16px;
+}
+.phone-menu{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    color: #333333;
+}
+.phone-menu h2{
+    font-size: 24px;
+    font-weight: 500;
+}
+.phone-menu li, .left-nav li{
+    text-align: left !important;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+hr{
+    margin: 7px 0;
+    border: 1px solid #e8e8ed;
+}
+.left-nav li a{
+    color: #3045a1;
+}
+.left-nav li a.active{
+    text-decoration: underline !important;
+    font-weight: 500;
+}
+.footer-bottom{
+    clear: both;
+    color: #17212f !important;
+    flex-direction: column;
+}
+.footer-bottom p{
+    text-align: center;
+    color: white;
+}
+.footer-bottom a{
+    color: white;
+    text-decoration: underline;
+}
+#validation-box{
+    padding: 10px 15px;
+    background-color: white;
+    border: 1px solid #bebebe;
+    max-width: 276px;
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    top: 26%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 100;
+    display: none;
+    transition: 0.2s;
+}
+#validation-box p{
+    margin: 0 !important;
+}
+.arrow::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -11px;
+    left: 46%;
+    background-color: white;
+    border-left: 1px solid #bebebe;
+    border-top: 1px solid #bebebe;
+    transform: rotate(45deg);
+}
+#password2:valid ~ #validation-box{
+    display: none !important;
+}
+span.red{
+    color: #D0021b;
+}
+span.green{
+    color: #00cd82;
+}
+
+@media screen and (min-width: 992px)
+{
+    .small-screen-only{
+        display: none;
+    }
+    .nav-links ul {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 992px){
+    header div{
+        display: block;
+    }
+    .navbar-brand{
+        display: none;
+    }
+    .nav-links{
+        left: -250px;
+    }
+    .small-screen-only{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #campaign-carousel h1{
+        font-size: 36px;
+    }
+    .input-group{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    .bigscreen-menu{
+        display: none !important;
+    }
+    #menu{
+        padding: 16px !important;
+        width: 100%;
+    }
+    .phone-menu{
+        display: block !important;
+    }
+    .settings{
+        padding: 16px !important;
+        width: 100%;
+    }
+    .left-nav{
+        display: none !important;
+    }
+    #right{
+        width: 100%;
+    }
+    #campaign-carousel{
+        padding: 55px !important;
+        text-align: center;
+    }
+    .carousel-btn{
+        flex-direction: column;
+    }
+    #campaign-carousel h1{
+        font-size: 25px;
+    }
+    #campaign-carousel p{
+        font-size: 18px;
+    }
+    .accounts-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+#preloader{
+    background: white url(../Images/preloader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}

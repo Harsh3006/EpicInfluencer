@@ -1,0 +1,91 @@
+.cover{
+    background-image: url(../Images/influencers_bg.png), url(../Images/influencers_bg1.svg), url(../Images/influencers_bg2.svg);
+    background-size: 45% auto, 60vw, 72vw;
+    background-position: right, -43vw -27vw, 55vw -7vw;
+    background-attachment: scroll, fixed, fixed;
+}
+.brands-logos div.column{
+    flex: 12.5%;
+    max-width: 12.5%;
+}
+.box1{
+    background-color: #FF5252;
+}
+.box2{
+    background-color: #FF8A99;
+}
+.box3{
+    background-color: #3045A1;
+}
+section button.blue{
+    margin-top: 30px;
+}
+.step{
+    max-width: 32%;
+}
+.icon-text{
+    width: 250px;
+}
+.icons p span{
+    color: #D0021B;
+    font-weight: 500;
+}
+#family {
+    box-shadow: -4px 9px 46px -15px #FF5252;
+    display: flex;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.caption, .carousel{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.carousel{
+    background-color: #FF5252;
+}
+.caption h2{
+    width: 100%;
+    color: #FF5252;
+}
+.carousel-image{
+    width: 80%;
+    margin: -25px auto;
+}
+.carousel-image img{
+    max-width: 100%;
+    animation: zoom 5s linear infinite;
+}
+@keyframes zoom {
+    0%{transform: scale(1.1);}
+    15%{transform: scale(1);}
+    85%{transform: scale(1);}
+    100%{transform: scale(1.1);}
+}
+@media (max-width: 992px){
+    .brands-logos div.column{
+        flex: 25%;
+        max-width: 25%;
+    }
+}
+@media (max-width: 768px){
+    .icon-container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .icons, .icon-text{
+        width: 100% !important;
+        padding-bottom: 20px;
+    }
+    .step{
+        max-width: 100% !important;
+    }
+    .step p{
+        padding: 0 10px 20px 10px;
+    }
+    .caption h2{
+        font-size: 20px;
+    }
+}

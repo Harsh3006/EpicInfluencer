@@ -1,0 +1,8 @@
+{% autoescape off %}
+Hey You!
+
+You're SO close to becoming a member of Epic Influencers community..just one more step!
+
+Confirm your email address by clicking here:
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+{% endautoescape %}

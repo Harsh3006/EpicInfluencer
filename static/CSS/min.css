@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none !important;
+}
+.logo img{
+    width: 200px;
+}
+.with-border{
+    background: transparent;
+    outline: none;
+    color: #3045a1;
+    padding: 10px 20px !important;
+    border: 1px solid #3045a1;
+}
+button.blue{
+    background-color: #3045a1;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.2s ease-out;
+}
+button.blue a{
+    color: white !important;
+}
+button.blue:hover{
+    color: white !important;
+    background-color: #522f92;
+}
+.top-banner button.blue a, .top-banner .with-border a{
+    font-size: 17px;
+    font-weight: 500;
+}
+.top-banner{
+    position: relative;
+}
+.cover{
+    background-repeat: no-repeat;
+    margin-bottom: 24px;
+    position: relative;
+    width: 100%;
+}
+.cover-items{
+    color: #17212f;
+    text-align: left;
+}
+div.pad{
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+section{
+    text-align: center;
+    margin-bottom: 100px;
+}
+section.brands-logos{
+    margin-bottom: 0 !important;
+}
+div.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.brands-logos div.column{
+    flex: 16.6%;
+    max-width: 16.6%;
+}
+.column img{
+    max-width: 100%;
+    display: block;
+}
+.grid-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 0 !important;
+}
+.grid-text{
+    padding: 30px;
+    color: white;
+}
+.text{
+    margin: 27% 0;
+}
+.text h1{
+    font-size: 50px;
+}
+.text h1 p{
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+}
+.text p{
+    font-size: 20px;
+    font-weight: normal;
+}
+.grid-row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner900{
+    max-width: 900px;
+    margin: auto;
+}
+.banner700{
+    max-width: 700px;
+    margin: auto;
+}
+.subtitle h1{
+    color: #17212f;
+    font-size: 35px;
+}
+.subtitle p{
+    color: #8a9299;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 50px;
+}
+.icon-container{
+    text-align: center;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.icon-box{
+    width: 150px;
+    margin: 0 auto;
+}
+.icon-container img{
+    width: 100%;
+    height: 100%;
+}
+.icon-container p{
+    max-width: 100%;
+    color: #17212f;
+    font-weight: 200;
+}
+.icon-container a{
+    max-width: 200px;
+    width: 100%;
+    text-decoration: none;
+    color: #17212f;
+    transition: 0.5s;
+}
+.tutorial-steps{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bullet{
+    margin-top: -30px;
+}
+.step span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #494a4b;
+    line-height: 54px;
+    font-size: 30px;
+    color: white;
+}
+.step img{
+    max-width: 100%;
+}
+.step h3{
+    color: #17212f;
+    padding: 15px 0;
+    font-size: 16px;
+}
+.step p{
+    line-height: 1.5;
+    color: #8a9299;
+}
+@media(min-width: 768px){
+    .cover-items{
+       padding: 65px;
+    }
+    .cover-items h1{
+        max-width: 45vw;
+        letter-spacing: 1px;
+        font-size: 60px;
+        line-height: 65px;
+    }
+    .cover-items p{
+        padding-top: 10px;
+        padding-right: 10px;
+        margin-bottom: 2rem;
+        max-width: 45vw;
+        font-size: 22px;
+    }
+    .bigscreen-only{
+        display: block;
+    }
+    .banner-btn p{
+        margin-top: 18px;
+        font-size: 16px !important;
+        font-weight: 300 !important;
+    }
+    .mobile-only
+    {
+        display: none !important;
+    }
+}
+@media(max-width: 1200px)
+{
+    h3{
+        font-size: 15px !important;
+    }
+    div.pad{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #prev, #next{
+        padding: 5px;
+        font-size: 70px;
+    }
+}
+@media (max-width: 992px){
+    .cover-items h1{
+        font-size: 40px !important;
+    }
+    .cover-items p{
+        font-size: 16px !important;
+    }
+    .banner-btn p{
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .text h1{
+        font-size: 40px !important;
+    }
+    .text h1 p{
+        font-size: 40px !important;
+    }
+    .registration-box .texts, .registration-box .request-form, .bottom-section .texts, .bottom-image{
+        width: 100% !important;
+    }
+}
+@media(max-width: 768px){
+    header li a.with-border{
+        background: transparent;
+        outline: none;
+        color: white;
+        border: none;
+    }
+    .cover-items{
+        padding: 15vw 5vw 10vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    } 
+    .cover-items h1{
+        font-size: 45px;
+        line-height: 55px !important;    
+        max-width: unset;
+    }
+    .cover-items p{
+        padding-top: 25px !important;
+        font-size: 16px;
+        line-height: 25px !important;
+        margin-bottom: 20px;
+        max-width: unset;
+    }
+    .mobile-only{
+        display: block !important;
+    }
+    .bigscreen-only{
+        display: none !important;
+    }
+    .mobile-only img{
+        max-width: 100%;
+        display: block;
+    }
+    .mobile-only .banner-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .brands-logos div.column{
+        flex: 33.3%;
+        max-width: 33.3%;
+    }
+    .grid-row{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .text{
+        margin: 1% 0;
+    }
+    .text p{
+        font-size: 20px !important;
+        font-weight: normal;
+    } 
+    .step{
+        max-width: 50% !important;
+    }
+    .step p{
+        padding: 0 10px 20px 10px;
+    }
+}

@@ -1,0 +1,276 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <link rel="stylesheet" href="{% static 'CSS/influencers.css' %}">
+    <title>Connect with the brands looking for influencers</title>
+    {% endblock head %}
+</head>
+<body>
+    {% block content %}
+    <section class="top-banner">
+        <div class="cover">
+            <div class="cover-items">
+                <h1>Collaborate with the best brands</h1>
+                <p>Epic Influencers helps Instagram and YouTube influencers partner with leading brands to receive free products in exchange for authentic content.</p>
+                <div class="bigscreen-only">
+                    <div class="banner-btn">
+                        <button class="blue" type="button"><a href="{% url 'signup' %}">Join Influencers</a></button>
+                        <p>Are you a Brand or an Agency? <a href="{% url 'index' %}">Click here</a></p>
+                    </div>
+                </div>
+                <div class="mobile-only">
+                    <img src="{% static 'Images/influencers_bg.png' %}">
+                    <div class="banner-btn">
+                        <button class="blue" type="button"><a href="{% url 'signup' %}">Join Influencers</a></button>
+                        <p>Are you a Brand or an Agency? <a href="{% url 'index' %}">Click here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands-logos">
+        <div class="pad">
+            <div class="row">
+                <div class="column">
+                    <img src="{% static 'Images/Lancome.png' %}">
+                    <img src="{% static 'Images/Skinfix.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/Dior.png' %}">
+                    <img src="{% static 'Images/Smashbox.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/ofra.png' %}">
+                    <img src="{% static 'Images/ysl.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/suncoo.png' %}">
+                    <img src="{% static 'Images/Makeup Forever.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/sephora.png' %}">
+                    <img src="{% static 'Images/Bobbi Brown.png' %}">     
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/Becca.png' %}">
+                    <img src="{% static 'Images/Mac.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/lalalab.png' %}">
+                    <img src="{% static 'Images/merci-handy.png' %}">
+                </div>
+                <div class="column">
+                    <img src="{% static 'Images/clarins.png' %}">
+                    <img src="{% static 'Images/Estee Lauder.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="pad">
+            <div class="banner900 subtitle">
+                <h1>Connect with brands looking for influencers</h1>
+                <p>Epic Influencers's platform helps influencers connect with brands for free products, sponsorships, paid campaigns, and more.</p>
+            </div>
+            <div class="icon-container">
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/influencers_icon1.png' %}">
+                    </div>
+                    <p>All brand collaborations in one app</p>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/influencers_icon2.png' %}">
+                    </div>
+                    <p>Work with the world’s hottest brands</p>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/influencers_icon3.png' %}">
+                    </div>
+                    <p>Participate in gifting campaigns</p>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/influencers_icon4.png' %}">
+                    </div>
+                    <p>Join a community of 30K+ influencers</p>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/influencers_icon5.png' %}">
+                    </div>
+                    <p>Attend events and more!</p>
+                </div>
+            </div>
+            <button class="blue" type="button"><a href="{% url 'signup' %}">Join the Community</a></button>
+        </div>
+    </section>
+
+    <section class="number">
+        <div class="pad">
+            <div class="banner900 subtitle">
+                <h1>Join our private influencer network</h1>
+                <p>Join a global community of influencers across beauty, fashion, lifestyle, fitness, travel, and more!</p>
+            </div>
+            <div class="grid-row">
+                <div class="box1 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">40,000</p>+</h1>
+                        <p>Certified influencers in our community</p>
+                    </div>
+                </div>
+                <div class="img1">
+                    <img src="{% static 'Images/influencers_number_img1.jpg' %}">
+                </div>
+                <div class="box2 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">9,416</p>+</h1>
+                        <p>Products available right now</p>
+                    </div>
+                </div>
+                <div class="img2">
+                    <img src="{% static 'Images/influencers_number_img2.jpg' %}">
+                </div>
+                <div class="box3 grid-text">
+                    <div class="text">
+                        <h1><p class="counter">700</p>K+</h1>
+                        <p>Brand/Influencer Collaborations</p>
+                    </div>
+                </div>
+                <div class="img3">
+                    <img src="{% static 'Images/influencers_number_img3.jpg' %}">
+                </div>
+            </div>
+        </div>
+        <button class="blue" type="button"><a href="{% url 'signup' %}">Join the Community</a></button>
+    </section>
+
+    <section class="works">
+        <div class="pad">
+            <div class="banner700 subtitle">
+                <h1>How It Works</h1>
+                <p>Influencers use Epic Influencers to find and participate in social media campaigns in exchange for free clothing, makeup, and more from the world's leading brands.</p>
+            </div>
+            <div class="tutorial-steps">
+                <div class="step">
+                    <img src="{% static 'Images/influencers_tuto.1.jpg' %}">
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <h3>REQUEST THE PRODUCT YOU'D LIKE TO TRY</h3>
+                    <p>All influencers on Epic Influencers start with 5 credits that you can exchange for products you choose on the free store.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/influencers_tuto.2.jpg' %}">
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <h3>GET PRODUCT DELIVERED TO YOUR DOOR</h3>
+                    <p>Place an order and when the brand approves your request we'll ship you the product. You'll have 21-28 days to create and post your content.</p>
+                </div>
+                <div class="step">
+                    <img src="{% static 'Images/influencers_tuto.3.jpg' %}">
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <h3>CREATE AUTHENTIC CONTENT ON INSTAGRAM OR YOUTUBE</h3>
+                    <p>When you submit your post through Epic Influencers, you will get your credit back so you can spend it on another product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="eligibility">
+        <div class="pad">
+            <div class="banner900 subtitle">
+                <h1>Eligibility to join #EpicInfluencersfamily</h1>
+                <p>Each application goes through a multi-step verification process to ensure real followers, engagement, and content quality.</p>
+            </div>
+            <div class="icon-container">
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/youtube.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p><span class="red">1,000+</span> subscribers</p>
+                        <p>An average of <span class="red">2,000+</span> views for the last 5 videos</p>
+                        <p>Active channel, Relevant and consistent content</p>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">    
+                        <img src="{% static 'Images/instagram.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p><span class="red">11,000+</span> followers 2% engagement rate</p>
+                        <p>Relevant and consistent content</p>
+                        <p>Public account</p>
+                    </div>
+                </div>
+                <div class="icons">
+                    <div class="icon-box">
+                        <img src="{% static 'Images/mxtakatak.png' %}">
+                    </div>
+                    <div class="icon-text">
+                        <p><span class="red">NEW!</span></p>
+                        <p>Active channel</p>
+                        <p>Relevant and consistent content</p>
+                        <p>Public account</p>
+                    </div>
+                </div>
+            </div>
+            <button class="blue" type="button"><a href="{% url 'signup' %}">Join the Community</a></button>
+        </div>
+    </section>
+
+    <section class="sliding-image">
+        <div class="pad">
+            <div id="family">
+                <div class="caption">
+                    <h2>Join the #EpicInfluencersfamily</h2>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-image">
+                        <img src="{% static 'Images/carousel1.jpg' %}" id="carousel-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var carousel_image = document.getElementById('carousel-image');
+        var images = new Array (
+            "{% static 'Images/carousel1.jpg' %}",
+            "{% static 'Images/carousel2.jpg' %}",
+            "{% static 'Images/carousel3.jpg' %}",
+            "{% static 'Images/carousel4.jpg' %}",
+            "{% static 'Images/carousel5.jpg' %}",
+            "{% static 'Images/carousel6.jpg' %}",
+            "{% static 'Images/carousel7.jpg' %}"
+        );
+
+        var len = images.length;
+        var c = 0;
+        carousel_slider();
+        function carousel_slider(){
+            if (c > len-1){
+                c = 0;
+            }
+            carousel_image.src = images[c];
+            c++;
+            setTimeout('carousel_slider()', 5000);
+        }
+    </script>
+    {% endblock content %}
+</body>
+</html>

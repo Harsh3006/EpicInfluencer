@@ -1,0 +1,28 @@
+{% extends 'campaigns/campaign-base.html' %}
+{% load static %}
+{% load active_link_tags %}
+{% block content %}
+<section class="settings">
+    <div class="container">
+        <div class="left-nav">
+            <ul>
+                <li><a href="{% url 'accounts' %}" class="{% active_link 'accounts' %}">Social Accounts</a></li>
+                <hr>
+                <li><a href="{% url 'personal' %}">Settings</a></li>
+                <li><a href="#">Interest</a></li>
+                <li><a href="{% url 'change-password' %}" class="{% active_link 'change-password' %}">Change Password</a></li>
+                <li><a href="#">Personal Profile</a></li>
+                <li><a href="#">Notifications</a></li>
+                <hr>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div id="right">
+            {% block right %}
+
+            {% endblock right%}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,101 @@
+section{
+    margin-bottom: 0px!important;
+}
+.request{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(white, rgba(23,33,47,0.07));
+}
+.request h1{
+    font-size: 40px;
+}
+h1, h2{
+    color: #17212f;
+}
+p, label{
+    color: #666666;
+}
+.registration-box{
+    text-align: left;
+    padding: 60px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 50px auto 200px;
+    background: #fff;
+    box-shadow: 0px 15px 80px -6px rgb(8 135 128 / 26%)
+}
+.texts{
+    margin-right: 30px;
+    width: 47.5%;
+    margin-bottom: 30px;
+}
+.request-form{
+    width: 47.5%;
+}
+.texts h3{
+    color: #088780!important;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 42px;
+    font-style: italic;
+    padding-bottom: 30px;
+}
+.texts p{
+    font-size: 14px;
+    padding-bottom: 16px;
+    line-height: 20px;
+}
+.input-group{
+    padding: 16px 0;
+    position: relative;
+    font-weight: 500;
+}
+input~label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    transition: 0.2s;
+}
+input:focus~label, input:valid~label{
+    top: -15px;
+}
+input, select{
+    font-size: 16px;
+    width: 100%;
+    margin: 5px 0;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background: transparent;
+}
+button{
+    font-size: 18px;
+    font-weight: 700;
+    color: white !important;
+}
+.bottom-section{
+    padding: 60px;
+    background-color: rgba(23,33,47,0.07)!important;
+}
+.bottom-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+.bottom-image{
+    width: 26%;
+    margin-right: 30px;
+}
+.bottom-image  img{
+    max-width: 100%;
+}
+.bottom-section .texts{
+    width: 67%;
+}
+.footer-top{
+    margin-top: 0 !important;
+}

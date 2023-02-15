@@ -1,0 +1,84 @@
+.cover{
+    background-image: url(../Images/pinkbg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cover-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cover-items h2{
+    color: #ff8a99;
+    font-size: 16px;
+    font-weight: 600;
+}
+img{
+    max-width: 100%;
+}
+.caseDetail{
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+.caseDetail h1{
+    text-align: center;
+    font-size: 40px;
+    color: #17212f;
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.row1::before, .row1::after{
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    width: 0;
+}
+.row1{
+    text-align: left;
+    padding-top: 28px;
+    padding-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+    .Item{
+        max-width: 45%;
+    }
+    .left{
+        float: left;
+        width: 47.5%;
+        margin-right: 5.5%;
+    }
+    .left.image{
+        position: sticky;
+        top: 80px;
+    }
+    .right{
+        margin: 0;
+        float: left;
+        width: 47%;
+    }
+}
+
+.caseDetail h3{
+    font-weight: 700;
+    font-size: 28px !important;
+    color: #088780!important;
+    letter-spacing: 1px;
+    line-height: 1.4em;
+    padding-bottom: 10px;
+}
+.caseDetail p{
+    font-size: 16px !important;
+    color: #17212f;
+    letter-spacing: 1px;
+    line-height: 2em;
+    padding: 10px 0;
+}

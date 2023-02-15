@@ -1,0 +1,164 @@
+{% extends 'campaigns/settings.html' %}
+{% load static %}
+{% block right %}
+<div class="social-accounts">
+    <div class="right-header">
+        <h1>Become an Influencer</h1>
+        <p>By connecting your Instagram or YouTube channel to your Epic Influencers account you can become an influencer
+            which will get you access to:</p>
+        <div class="benefits">
+            <div>
+                <img src="{% static 'Images/access1.png' %}">
+                <p>Gifting campaigns with luxury lifestyle, skincare, wellness and beauty brands</p>
+            </div>
+            <div>
+                <img src="{% static 'Images/access2.png' %}">
+                <p>Connect directly and develop long-lasting relationships with your favorite brands</p>
+            </div>
+            <div>
+                <img src="{% static 'Images/access3.png' %}">
+                <p>3 extra credits on the Free Store (=total of 5 credits). You don’t need to spend your own money to
+                    test products that have been on your wish-list!</p>
+            </div>
+            <div>
+                <img src="{% static 'Images/access4.png' %}">
+                <p>Invitation to special events with brands</p>
+            </div>
+            <div>
+                <img src="{% static 'Images/access5.png' %}">
+                <p>Tools, tips and tricks you need to grow your online presence</p>
+            </div>
+        </div>
+    </div>
+    <div class="accounts-grid">
+        <div class="accounts-col">
+            <div class="social-media">
+                <div class="name">
+                    <img src="{% static 'Images/instagram.svg' %}">
+                    <h2>Instagram</h2>
+                </div>
+                <div>
+                    <button class="blue" onclick="showPopup('insta_popup')">Add</button>
+                </div>
+            </div>
+            <p><i class="fas fa-check"></i> 1,000+ followers</p>
+            <p><i class="fas fa-check"></i> 2% engagement rate</p>
+            <p><i class="fas fa-check"></i> Relevant and consistent content</p>
+            <p><i class="fas fa-check"></i> Public account</p>
+            <p><i class="fas fa-check"></i> Authenticity of audience</p>
+        </div>
+        <div class="accounts-col">
+            <div class="social-media">
+                <div class="name">
+                    <img src="{% static 'Images/youtube.svg' %}">
+                    <h2>YouTube</h2>
+                </div>
+                <div>
+                    <button class="blue" onclick="showPopup('youtube_popup')">Add</button>
+                </div>
+            </div>
+            <p><i class="fas fa-check"></i> 1,000+ subscribers</p>
+            <p><i class="fas fa-check"></i> A minimum average of 2,000 views for the last 5 videos</p>
+            <p><i class="fas fa-check"></i> Relevant and consistent content</p>
+            <p><i class="fas fa-check"></i> Active channel</p>
+            <p><i class="fas fa-check"></i> Authenticity of audience</p>
+        </div>
+        <div class="accounts-col">
+            <div class="social-media">
+                <div class="name">
+                    <img src="{% static 'Images/tiktok.svg' %}">
+                    <h2>TikTok</h2>
+                </div>
+                <div>
+                    <button class="blue" onclick="showPopup('tiktok_popup')">Add</button>
+                </div>
+            </div>
+            <p><i class="fas fa-check"></i> 1,000+ followers</p>
+            <p><i class="fas fa-check"></i> 2% engagement rate</p>
+            <p><i class="fas fa-check"></i> Relevant and consistent content</p>
+            <p><i class="fas fa-check"></i> Public account</p>
+            <p><i class="fas fa-check"></i> Authenticity of audience</p>
+        </div>
+        <div class="accounts-col">
+            <div class="social-media">
+                <div class="name">
+                    <img src="{% static 'Images/blog.svg' %}">
+                    <h2>Blog</h2>
+                </div>
+                <div>
+                    <button class="blue" onclick="showPopup('blog_popup')">Add</button>
+                </div>
+            </div>
+            <p><i class="fas fa-check"></i> Relevant and consistent content</p>
+            <p><i class="fas fa-check"></i> Authenticity of audience</p>
+            <p><i class="fas fa-check"></i> Active content</p>
+        </div>
+    </div>
+</div>
+<div>
+    <div id="insta-popup-container" class="popup-container">
+        <div class="popup-item">
+            <span><i class="fas fa-times" onclick="hidePopup('insta_popup')"></i></span>
+            <div class="image">
+                <img src="{% static 'Images/instagram.svg' %}" alt="Instagram">
+            </div>
+            <div class="form-container">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <label for="insta_username">Enter your Instagram username.</label>
+                    <input type="text" name="insta_username" id="insta_username">
+                    <input type="submit" value="Contunue">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="youtube-popup-container" class="popup-container">
+        <div class="popup-item">
+            <span><i class="fas fa-times" onclick="hidePopup('youtube_popup')"></i></span>
+            <div class="image">
+                <img src="{% static 'Images/youtube.svg' %}" alt="YouTube">
+            </div>
+            <div class="form-container">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <label for="youtube_url">Enter your YouTube channel url</label>
+                    <input type="url" name="youtube_url" id="youtube_url">
+                    <input type="submit" value="Continue">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="tiktok-popup-container" class="popup-container">
+        <div class="popup-item">
+            <span><i class="fas fa-times" onclick="hidePopup('tiktok_popup')"></i></span>
+            <div class="image">
+                <img src="{% static 'Images/tiktok.svg' %}" alt="TikTok">
+            </div>
+            <div class="form-container">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <label for="titkok_username">Enter your TikTok username</label>
+                    <input type="text" name="titkok_username" id="titkok_username">
+                    <input type="submit" value="Continue">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="blog-popup-container" class="popup-container">
+        <div class="popup-item">
+            <span><i class="fas fa-times" onclick="hidePopup('blog_popup')"></i></span>
+            <div class="image">
+                <img src="{% static 'Images/blog.svg' %}" alt="Blog">
+            </div>
+            <div class="form-container">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+                    <label for="blog_url">Add the link to your blog</label>
+                    <input type="url" name="blog_url" id="blog_url">
+                    <input type="submit" value="Continue">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock right %}

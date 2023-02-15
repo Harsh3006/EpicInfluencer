@@ -1,0 +1,27 @@
+.cover{
+    background-image: url(../Images/consumers_bg1.png), url(../Images/consumers_bg2.svg), url(../Images/consumers_bg3.svg);
+    background-size: contain, 60vw, 80vw;
+    background-position: 85% 50%, -47vw -20vw, 48vw 2vw;
+    background-attachment: scroll, fixed, fixed;
+}
+.box1{
+    background-color: #008780;
+}
+.box2{
+    background-color: #63CBE6;
+}
+.box3{
+    background-color: #68E3B4;
+}
+.icon-text{
+    width: 150px;
+}
+@media (max-width: 768px){
+    .cover{
+        background-image: url(../Images/consumers_bg2.svg), url(../Images/consumers_bg3.svg);
+        background-size: 90vw, 100vw;
+        background-position: -50vw -15vw, 40vw 100vw;
+        margin-bottom: 0;
+        background-attachment: fixed, fixed;
+    }
+}

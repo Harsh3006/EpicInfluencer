@@ -1,0 +1,102 @@
+{% load static %}
+{% load active_link_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Images/favicon.png' %}" type="image" sizes="20x20">
+    <title>Epic Influencers.com</title>
+    <link rel="stylesheet" href="{% static 'fontawesome_free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/base_style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/campaigns.css' %}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <!--Navigation Bar-->
+    <header class="navigation">
+        <nav>
+            <div>
+                <i class="fas fa-bars menu-toggler" onclick="showMenu('campaigns')"></i>
+                <div class="small-screen-only">
+                    <a href="{% url 'home' %}"><img src="{% static 'Images/epiclogo.png' %}" height="60px"></a>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'Images/epiclogo.png' %}"></a>
+                    <i class="fas fa-times menu-toggler" onclick="hideMenu('campaigns')"></i>
+                    <ul>
+                        <li><a href="{% url 'home' %}" class="{% active_link 'home' strict=True %}">HOME</a></li>
+                        <li><a href="#">PRODUCTS</a></li>
+                        <li><a href="#">ORDERS</a></li>
+                        <li><button class="blue"><a href="{% url 'accounts' %}">I'm an Influencer</a></button></li>
+                    </ul>
+                </div>
+            </div>
+            <a><i class="far fa-user-circle" id="user-icon"></i></a>
+        </nav>
+        <div id="menu">
+            <ul class="bigscreen-menu">
+                <li><a href="{% url 'personal' %}">Account</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Report a problem</a></li>
+                <li><a href="{% url 'logout' %}">Log Out</a></li>
+            </ul>
+            <ul class="phone-menu">
+                <h2>Account</h1>
+                    <li><a href="{% url 'accounts' %}">Social Accounts</a></li>
+                    <hr>
+                    <li><a href="{% url 'personal' %}">Settings</a></li>
+                    <li><a href="#">Interest</a></li>
+                    <li><a href="{% url 'change-password' %}">Change Password</a></li>
+                    <li><a href="#">Personal Profile</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <hr>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Report a problem</a></li>
+                    <hr>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+            </ul>
+        </div>
+    </header>
+    {% for message in messages %}
+    <h3 id="message" class="{{message.tags}}">{{message}}</h3>
+    {% endfor %}
+    {% if not request.user.is_email_verified %}
+    <div class="activate-email">
+        <p>TO ORDER, WE NEED TO VERIFY YOUR EMAIL ADDRESS</p><a onclick="showPopup('email_popup')">Send Me
+            Verification Email</a>
+    </div>
+    {% endif %}
+    </header>
+    {% block content %}
+
+    {% endblock content %}
+    <div class="footer-bottom">
+        <div class="copyright">
+            <a href="{% url 'index' %}" style="vertical-align: middle;"><img
+                    src="{% static 'Images/epiclogoWhite.png' %}" alt="logo" width="150px"></a>
+        </div>
+        <p>2021 Epic Influencers All rights reserved. <a href="{% url 'legal-notice' %}">Legal</a>, <a
+                href="{% url 'about' %}">About Us</a> and <a href="#">Contact Us</a></p>
+    </div>
+    <div id="email-popup-container" class="popup-container">
+        <div class="popup-item">
+            <span><i class="fas fa-times" onclick="hidePopup('email_popup')"></i></span>
+            <h1>PLEASE, CONFIRM YOUR EMAIL ADDRESS</h1>
+            <p>To use your Octoly account, we need to verify your email address.</p>
+            <form action="{% url 'send-activation-email' %}" method="POST">
+                {% csrf_token %}
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" value="{{request.user.email}}">
+                <input type="submit" value="Send Me Email">
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'JS/slick.min.js' %}"></script>
+    <script src="{% static 'JS/common.js' %}"></script>
+</body>

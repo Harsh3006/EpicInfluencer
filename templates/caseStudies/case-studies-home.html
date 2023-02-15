@@ -1,0 +1,118 @@
+{% extends 'base.html' %} {% load static %} {% load range_tag %} {% block head %}
+<title>Case Studies</title>
+<link rel="stylesheet" href="{% static 'CSS/case-studies-home.css' %}">
+<style>
+    .case-content.active {
+        background-color: red;
+    }
+</style>
+{% endblock head %} {% block content %}
+<section class="top-banner">
+    <div class="cover">
+        <div class="cover-items">
+            <h1>Customer Success Stories</h1>
+            <p>Epic Influencers is an influencer marketing platform that enables brands to collaborate with our 35K+ vetted influencers with a reach of over 3 billion engaged consumers.</p>
+            <div class="bigscreen-only">
+                <div class="banner-btn">
+                    <button class="blue" type="button"><a href="#case-studies">View all case studies</a></button>
+                </div>
+                <img src="{% static 'Images/case-studies-home.banner.png' %}">
+            </div>
+            <div class="mobile-only">
+                <div class="banner-btn">
+                    <button class="blue" type="button"><a href="#case-studies">View all case studies</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="case-studies" id="case-studies">
+    <div class="pad case-box">
+        <div class="filter-box">
+            <div class="filter-type">
+                <p>Filter By Product Type</p>
+                <ul class="types" id="product_types">
+                    <li><a onclick="filterProduct('all')" class="product_btn active">All Products</a></li>
+                    <li><a onclick="filterProduct('social_media')" class="product_btn">Social Media Content</a></li>
+                    <li><a onclick="filterProduct('text_reviews')" class="product_btn">Text Reviews</a></li>
+                </ul>
+            </div>
+            <div class="filter-type">
+                <p>Filter By Industry</p>
+                <ul class="types" id="industry_types">
+                    <li><a onclick="filterIndustry('all')" class="industry_btn active">All Industries</a></li>
+                    <li><a onclick="filterIndustry('beauty')" class="industry_btn">Beauty</a></li>
+                    <li><a onclick="filterIndustry('fashion')" class="industry_btn">Fashion</a></li>
+                    <li><a onclick="filterIndustry('fragrances')" class="industry_btn">Fragrances</a></li>
+                    <li><a onclick="filterIndustry('haircare')" class="industry_btn">Haircare</a></li>
+                    <li><a onclick="filterIndustry('home_goods')" class="industry_btn">Home Goods</a></li>
+                    <li><a onclick="filterIndustry('skincare')" class="industry_btn">Skincare</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="case-conatiner">
+            {% for case in object_list %}
+            <div class="all case-content {{case.product}} {{case.industry}}">
+                <div class="img">
+                    <img src="{{case.img.url}}">
+                    <div class="overlay"></div>
+                </div>
+                <div class="brand">
+                    <h2>{{case.brand}}</h2>
+                </div>
+                <div class="title">{{case.title}}</div>
+                <div class="summary">{{case.summary}}</div>
+                <div class="readMore"><a href="#">Read More</a></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="brands-logos">
+    <div class="pad">
+        <div class="row">
+            <div class="column">
+                <img src="{% static 'Images/clarins.png' %}">
+                <img src="{% static 'Images/slash.png' %}">
+            </div>
+            <div class="column">
+                <img src="{% static 'Images/lalalab.png' %}">
+                <img src="{% static 'Images/Chella.png' %}">
+            </div>
+            <div class="column">
+                <img src="{% static 'Images/merci-handy.png' %}">
+                <img src="{% static 'Images/cabaia.png' %}">
+            </div>
+            <div class="column">
+                <img src="{% static 'Images/suncoo.png' %}">
+                <img src="{% static 'Images/URCosmetics.png' %}">
+            </div>
+            <div class="column">
+                <img src="{% static 'Images/laneige.png' %}">
+                <img src="{% static 'Images/OnePiece.png' %}">
+            </div>
+            <div class="column">
+                <img src="{% static 'Images/ofra.png' %}">
+                <img src="{% static 'Images/Scentbird.png' %}">
+            </div>
+        </div>
+    </div>
+</section>
+<div class="gettingStarted">
+    <h1>Getting started is easy</h1>
+    <div class="box">
+        <p>Kickstart your Influencer Marketing Strategy Now</p>
+        <button class="blue" type="button"><a href="{% url 'demo-request' %}">Request a demo</a></button>
+    </div>
+</div>
+<script src="{% static 'JS/case-studies-home.js' %}"></script>
+<script>
+    var cases = document.getElementsByClassName('case-content');
+    console.log(cases.length);
+    for (i = 0; i < cases.length; i++) {
+        if (i % 2 != 0) {
+            cases[i].classList.add('active');
+        }
+    }
+</script>
+{% endblock content %}

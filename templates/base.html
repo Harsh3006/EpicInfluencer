@@ -1,0 +1,162 @@
+{% load static %}
+{% load active_link_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'Images/favicon.png' %}" type="image" sizes="20x20">
+    <link rel="stylesheet" href="{% static 'fontawesome_free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/min.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/base_style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="{% static 'JS/jquery.counterup.min.js' %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="{% static 'JS/jquerycounter.js' %}"></script>
+    
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <!--Pre Loader-->
+    <div id="preloader"></div>
+
+    <!--Navigation Bar-->
+    <header class="navigation">
+        <nav>
+            <a href="{% url 'index' %}" class="navbar-brand"><img src="{% static 'Images/epiclogo.png' %}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times menu-toggler" onclick="hideMenu('index')"></i>
+                <ul>
+                    <li><a href="{% url 'index' %}" class="{% active_link 'index' strict=True %}">BRANDS <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="/#campaign">Solutions</a></li>
+                                <li><a href="{% url 'case-studies-home' %}" class="{% active_link 'case-studies-home' %}" target="_blank">Case Studies</a></li>
+                                <!-- <li><a href="#">Blog</a></li> -->
+                                <li><a href="{% url 'demo-request' %}" class="{% active_link 'demo-request' %}">Request a Demo</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="{% url 'influencers' %}" class="{% active_link 'influencers' %}">INFLUENCERS</a></li>
+                    <li><a href="{% url 'consumers' %}" class="{% active_link 'consumers' %}">CONSUMERS</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" class="with-border">LOGOUT</a></li>
+                    {% else %}
+                    <li><a href="{% url 'login' %}" class="with-border">LOGIN</a></li>
+                    <li><a href="{% url 'signup' %}" class="with-border">SIGNUP</a></li>
+                    {% endif %}
+                    <li><button class="blue"><a href="{% url 'demo-request' %}">REQUEST A DEMO</a></button></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars menu-toggler" onclick="showMenu('index')"></i>
+        </nav>
+    </header>
+    {% block content %}
+    
+    {% endblock content %}
+    <!-- Footer Top-->
+    <div class="footer-top">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'Images/epiclogoWhite.png' %}" alt="logo"></a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="menu-desktop-bottom menu-bottom">
+            <ul>
+                <li class="menu-header">BRANDS</li>
+                <li class="menu-item"><a href="{% url 'index' %}">Home</a></li>
+                <!-- <li class="menu-item"><a href="#">Blog</a></li> -->
+                <li class="menu-item"><a href="{% url 'case-studies-home' %}">Case Studies</a></li>
+                <li class="menu-item"><a href="#">Help</a></li>
+                <li class="menu-item"><a href="{% url 'newsletter' %}">Newsletter</a></li>
+                <li class="menu-item"><a href="{% url 'login' %}">Sign In</a></li>
+                <li class="menu-item"><a href="{% url 'demo-request' %}">Request a demo</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">INFLUENCERS</li>
+                <li class="menu-item"><a href="{% url 'influencers' %}">Home</a></li>
+                <li class="menu-item"><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li class="menu-item"><a href="{% url 'login' %}">Sign In</a></li>
+                <li class="menu-item"><a href="#">Download App</a></li>
+                <li class="menu-item"><a href="#">Help</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">CONSUMERS</li>
+                <li class="menu-item"><a href="{% url 'consumers' %}">Home</a></li>
+                <li class="menu-item"><a href="{% url 'signup' %}">SIgn Up</a></li>
+                <li class="menu-item"><a href="{% url 'login' %}">Sign In</a></li>
+                <li class="menu-item"><a href="#">Download App</a></li>
+                <li class="menu-item"><a href="#">Help</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">COMPANY</li>
+                <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
+                <li class="menu-item"><a href="#">Contact Us</a></li>
+                <li class="menu-item"><a href="#">Careers</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">LEGAL</li>
+                <li class="menu-item"><a href="{% url 'legal-notice' %}">Legal Notice</a></li>
+                <li class="menu-item"><a href="#">Terms of Use</a></li>
+                <li class="menu-item"><a href="#">Privacy Police</a></li>
+                <li class="menu-item"><a href="#">Photo Credits</a></li>
+            </ul>
+        </div>
+        <div class="menu-phone-bottom menu-bottom">
+            <ul>
+                <li class="menu-header">BRANDS</li>
+                <li class="menu-item"><a href="{% url 'index' %}">Home</a></li>
+                <!-- <li class="menu-item"><a href="#">Blog</a></li> -->
+                <li class="menu-item"><a href="{% url 'case-studies-home' %}">Case Studies</a></li>
+                <li class="menu-item"><a href="#">Help</a></li>
+                <li class="menu-item"><a href="{% url 'newsletter' %}">Newsletter</a></li>
+                <li class="menu-item"><a href="user/login">Sign In</a></li>
+                <li class="menu-item"><a href="{% url 'demo-request' %}">Request a demo</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">INFLUENCERS</li>
+                <li class="menu-item"><a href="{% url 'influencers' %}">Home</a></li>
+                <li class="menu-item"><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li class="menu-item"><a href="{% url 'login' %}">Sign In</a></li>
+                <li class="menu-item"><a href="#">Download App</a></li>
+                <li class="menu-item"><a href="#">Help</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">CONSUMERS</li>
+                <li class="menu-item"><a href="{% url 'consumers' %}">Home</a></li>
+                <li class="menu-item"><a href="{% url 'signup' %}">SIgn Up</a></li>
+                <li class="menu-item"><a href="{% url 'login' %}">Sign In</a></li>
+                <li class="menu-item"><a href="#">Download App</a></li>
+                <li class="menu-item"><a href="#">Help</a></li>
+            </ul>
+            <ul>
+                <li class="menu-header">COMPANY</li>
+                <li class="menu-item"><a href="{% url 'about' %}">About</a></li>
+                <li class="menu-item"><a href="#">Contact Us</a></li>
+                <li class="menu-item"><a href="#">Careers</a></li>
+                <li class="menu-item"><a href="{% url 'legal-notice' %}">Legal Notice</a></li>
+                <li class="menu-item"><a href="#">Terms of Use</a></li>
+                <li class="menu-item"><a href="#">Privacy Police</a></li>
+                <li class="menu-item"><a href="{% url 'demo-request' %}">Request a demo</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="copyright">
+            <a href="{% url 'index' %}" style="vertical-align: middle;"><img src="{% static 'Images/epiclogoWhite.png' %}" alt="logo" width="100px"></a> &copy; 2021
+        </div>
+        <div class="euro-programme">
+            <img src="{% static 'Images/euro-programme.png' %}">
+        </div>
+    </div>
+    <script src="{% static 'JS/common.js' %}"></script>
+</body>
+</html>

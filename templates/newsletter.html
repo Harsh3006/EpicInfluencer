@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Monthly Influencer Marketing Insights</title>
+    <link rel="stylesheet" href="{% static 'CSS/demo_request.css' %}">
+    {% endblock head %}
+</head>
+<body>
+    {% block content %}
+    <section class="request">
+        <h1>Talk to an Influencer Marketing Specialist</h1>
+        <div class="registration-box">
+            <div class="texts">
+                <h3>Subscribe to the Epic Influencers Newsletter to get in your inbox monthly Influencer Marketing insights and fresh news.</h3>
+                <p>Get influencer marketing tips straight to your inbox and become a better marketer. Join the Direct-to-Consumer revolution.</p>
+                <p>By submitting this form, you agree that your email address is used to communicate with you from time to time about product and marketing updates (Article 6 GDPR).</p>
+            </div>
+            <div class="request-form">
+                <form action="#" method="post">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <button class="blue" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-section">
+        <div class="bottom-container">
+            <div class="bottom-image">
+                <img src="{% static 'Images/request-bottom.png' %}">
+            </div>
+            <div class="texts">
+                <h2>About Epic Influencers: Reach a unique community of 40,000+ influencers and 300,000+ consumers</h2>
+                <p>Epic Influencers is a gifting platform for influencers. Our unique platform connects brands to over 40,000 influencers and 300,000 consumers on YouTube, TikTok, Instagram and Instagram Stories with over 1 billion collective subscribers — generating authentic social media posts and product reviews on your products at scale.</p>
+                <p>In today’s social world, it’s imperative to leverage unbiased reviews to drive sales. Epic Influencers allows you to do this by gifting products at scale—so that trust and authenticity between your brand and the influencer community remain at the forefront. Through a mobile app, our community of influencers can select free products to review, while brands can choose who they want to review them. We connect our community of influencers with your brand to create authentic content. Epic Influencers operates in 7 countries (France, United States, United Kingdom, Germany, Spain, Italy and Poland) with offices in Paris and New York.</p>
+            </div>
+        </div>
+    </section>
+    {% endblock content %}
+</body>
+</html>
